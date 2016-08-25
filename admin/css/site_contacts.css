@@ -1,0 +1,196 @@
+.bordered
+{
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover
+{
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, 
+.bordered th
+{
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th
+{
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.bordered td:first-child, 
+.bordered th:first-child
+{
+    border-left: none;
+}
+
+.bordered th:first-child
+{
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child
+{
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child
+{
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child
+{
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+
+.bordered td
+{
+    position: relative;
+    max-width: 508px;
+}
+
+.bordered input.error
+{
+    background: #f4d6d8;
+}
+
+.bordered span.error
+{
+    background: #f4d6d8;
+    left: 13px;
+    margin-top: 8px;
+    padding: 5px;
+    position: absolute;
+    max-width: 170px;
+    display: block;
+}
+
+.bordered span.error:before
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f4d6d8;
+    position: absolute;
+    top: -8px;
+}
+
+.bordered button,
+.bordered input[name="save"]
+{
+    height: 32px;
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 32px;
+    border: none;
+    background: url(../img/icons32.png) 0 0 no-repeat;
+    cursor: pointer;
+}
+
+.bordered button.edit
+{
+    background-position: 0 0 ;
+}
+
+.bordered button.edit:hover
+{
+    background-position: -96px 0 ;
+}
+
+.bordered button.delete
+{
+    background-position: -32px 0 ;
+}
+
+.bordered button.delete:hover
+{
+    background-position: -127px 0 ;
+}
+
+.bordered button.save
+{
+    background-position: 0 -32px ;
+}
+
+.bordered button.save:hover
+{
+    background-position: -96px -32px ;
+}
+
+.bordered button.cancel
+{
+    background-position: -32px -33px ;
+}
+
+.bordered button.cancel:hover
+{
+    background-position: -127px -33px ;
+}
+
+.bordered input[type="text"]
+{
+    min-width: 158px ;
+    width: 100%;
+}
+
+.bordered input[name="save"]
+{
+    background-position: -64px 0 ;
+}
+
+.bordered [name="save"]:hover
+{
+    background-position: -64px -32px ;
+}
+
+#add_map textarea
+{
+    display: block;
+    height: 44px;
+    min-height: 190px;
+    min-width: 560px;
+}
+
+#add_map input
+{
+    display: block;
+    cursor: pointer;
+}
