@@ -17,8 +17,6 @@ if(!defined('WPINC'))
 	die;
 }
 
-namespace Hedgehog333;
-
 $path = plugin_dir_path( __FILE__ );
 require_once $path . 'includes/site-contacts-manager.php';
 require_once $path . 'admin/site-contacts-manager-admin.php';
