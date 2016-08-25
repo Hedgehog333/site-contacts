@@ -6,7 +6,7 @@
 	Version:		0.1.0
 	Author:			Hedgehog333
 	Author URI:		https://github.com/Hedgehog333
-	Text Domain:	
+	Text Domain:	site-contacts
 	License:		GPL-2.0+
 	License URI:	https://www.gnu.org/licenses/gpl-2.0.txt
 	Domain Path:	/languages
@@ -16,6 +16,8 @@ if(!defined('WPINC'))
 {
 	die;
 }
+
+namespace Hedgehog333;
 
 $path = plugin_dir_path( __FILE__ );
 require_once $path . 'includes/site-contacts-manager.php';
