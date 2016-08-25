@@ -132,7 +132,7 @@
 
 .bordered button.edit:hover
 {
-    background-position: -96px 0 ;
+    background-position: -95px 0 ;
 }
 
 .bordered button.delete
@@ -152,7 +152,7 @@
 
 .bordered button.save:hover
 {
-    background-position: -96px -32px ;
+    background-position: -95px -32px ;
 }
 
 .bordered button.cancel
