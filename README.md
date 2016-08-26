@@ -5,7 +5,8 @@ The plugin is designed to store contact information of the site. Such as phone, 
 Once activated in the __Settings__ item appears __Site Contacts__.
 
 ### Tech
-* [jQuery] - duh
+* [jQuery] - The Write Less, Do More, JavaScript Library.
+* [Ajax] - Technology to the server without reloading the page.
 
 ### Shortcode
 If you want to get data from html:
@@ -19,3 +20,4 @@ echo do_shortcode('[sitecontact code="code_name"]');
 ```
 
 [jQuery]: <http://jquery.com>
+[Ajax]: <https://api.jquery.com/jquery.post/>
