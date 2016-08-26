@@ -107,3 +107,9 @@ function hgh_update_callback() {
 	wp_die();
 }
 add_action( 'wp_ajax_hgh_update_contact', 'hgh_update_callback' );
+
+add_action('plugins_loaded', 'hgh_textdomain');
+function hgh_textdomain()
+{
+	load_plugin_textdomain( 'site-contacts', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
