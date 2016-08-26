@@ -37,7 +37,7 @@ function run_site_contacts_manager()
 {
 	global $scm;
 	$scm->run();
-	add_options_page('Контакты', __('Site Contacts', 'site-contacts'), 8, basename(__FILE__), 'hgh_add_to_menu');
+	add_options_page(__('Site Contacts', 'site-contacts'), __('Site Contacts', 'site-contacts'), 8, basename(__FILE__), 'hgh_add_to_menu');
 
 	if(isset($_POST['hgh_site_contact_map']))
 		update_option('hgh_site_contact_map', $_POST['hgh_site_contact_map']);
