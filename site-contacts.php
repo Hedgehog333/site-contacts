@@ -2,7 +2,7 @@
 /*
 	Plugin Name:	Site Contacts
 	Plugin URI:		https://github.com/Hedgehog333/site-contacts
-	Description:	It allows you to save contact details in the variables and use them on the website.
+	Description:	It allows you to save contact details in the database and use them on the website.
 	Version:		0.1.0
 	Author:			Hedgehog333
 	Author URI:		https://github.com/Hedgehog333
@@ -29,7 +29,7 @@ global $scma;
 $scma = new Site_Contacts_Manager_Admin($scm->get_version());
 global $wpdb;
 global $dbinit;
-$dbinit = new Site_Contacts_Initial_DB($wpdb, 'hgh_site_contacts', '1.0');
+$dbinit = new Site_Contacts_Initial_DB($wpdb, 'hgh_site_contacts');
 global $db;
 $db = new Site_Contacts_Manager_DB($dbinit->get_wpdb(), $dbinit->get_table_name());
 
@@ -37,7 +37,7 @@ function run_site_contacts_manager()
 {
 	global $scm;
 	$scm->run();
-	add_options_page('Контакты', 'Site Contacts', 8, basename(__FILE__), 'hgh_add_to_menu');
+	add_options_page('Контакты', __('Site Contacts', 'site-contacts'), 8, basename(__FILE__), 'hgh_add_to_menu');
 
 	if(isset($_POST['hgh_site_contact_map']))
 		update_option('hgh_site_contact_map', $_POST['hgh_site_contact_map']);

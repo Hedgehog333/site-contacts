@@ -29,6 +29,17 @@ class Site_Contacts_Manager_Admin
 			$this->version,
 			FALSE
 		);
+		wp_localize_script( 'site-contacts-js', 'dictionary', array( 
+			'erUniq' => __( 'The value must be unique.', 'site-contacts' ),
+			'erAjax' => __( 'Error ajax.\nOpen the Developer Console to view the error messages.', 'site-contacts' ),
+			'erPattern' => __( 'Letters, numbers, hyphens, and underscores', 'site-contacts' ),
+			'erEmpty' => __( 'The field must contain the value', 'site-contacts' ),
+			'btnEdit' => __( 'edit', 'site-contacts' ),
+			'btnDelete' => __( 'delete', 'site-contacts' ),
+			'btnSave' => __( 'save', 'site-contacts' ),
+			'btnCancle' => __( 'cancel', 'site-contacts' )
+			)
+		);
 	}
 
 	public function render($wpdb) {

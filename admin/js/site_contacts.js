@@ -34,19 +34,18 @@ jQuery( document ).ready( function( $ ) {
             {
                 errorFieldMessage(
                     $('#add_contact input[name="code"]'), 
-                    'The value must be unique.'
+                    dictionary.erUniq
                 );
             }
 		})
 		.fail(function(xhr, status, error) {
-            alert( 'Error ajax.\nOpen the Developer Console to view the error messages.');
+            alert( dictionary.erAjax );
 			console.log( error );
 		});
     });
 
     $(document).on('click', 'button.edit', function(e){
         e.preventDefault();
-        console.log('edit');
         var row = $(this).parent().parent();
         var id = row.data('contactId');
         editCell(id, 0);
@@ -56,12 +55,12 @@ jQuery( document ).ready( function( $ ) {
         var btn = row.children().eq(4).children("button");
         btn.removeClass();
         btn.addClass('cancel');
-        btn.text('cancel');
+        btn.text( dictionary.btnCancle );
 
         btn = $(this);
         btn.removeClass();
         btn.addClass('save');
-        btn.text('save');
+        btn.text( dictionary.btnSave );
         return false;
     });
 
@@ -110,7 +109,7 @@ jQuery( document ).ready( function( $ ) {
             {
                 errorFieldMessage(
                     Code, 
-                    'The value must be unique.'
+                    dictionary.erUniq
                 ); 
             }
             else if(obj.result)
@@ -123,11 +122,11 @@ jQuery( document ).ready( function( $ ) {
                 var b = btn.parent().parent().children().eq(4).children("button");
                 b.removeClass();
                 b.addClass('delete');
-                b.text('delete');
+                b.text( dictionary.btnDelele );
 
                 btn.removeClass();
                 btn.addClass('edit');
-                btn.text('edit');
+                btn.text( dictionary.btnEdit );
             }
         });
 
@@ -144,12 +143,12 @@ jQuery( document ).ready( function( $ ) {
         var btn = $(this);
         btn.removeClass();
         btn.addClass('delete');
-        btn.text('delete');
+        btn.text( dictionary.btnDelele );
 
         btn = row.children().eq(3).children("button");
         btn.removeClass();
         btn.addClass('edit');
-        btn.text('edit');
+        btn.text( dictionary.btnEdit );
 
         return false;
     });
@@ -159,7 +158,7 @@ jQuery( document ).ready( function( $ ) {
         var cur = $('.bordered [data-contact-id="'+id+'"]').children().eq(cellNum);
         var dafaultText = cur.text();
         cur.empty();
-        cur.append('<input type="text" ' + (cellNum==0?'pattern="[a-z0-9-_]{1,55}" title="Letters, numbers, hyphens, and underscores"':'' )+ ' required value="'+dafaultText+'" name="tv" /><span class="defval" style="display:none;">'+dafaultText+'</span><span class="error" style="display: none;"></span>');
+        cur.append('<input type="text" ' + (cellNum==0?'pattern="[a-z0-9-_]{1,55}" title="'+ dictionary.erPattern +'"':'' )+ ' required value="'+dafaultText+'" name="tv" /><span class="defval" style="display:none;">'+dafaultText+'</span><span class="error" style="display: none;"></span>');
     }
 
     function cancelEditCell(id)
@@ -190,13 +189,13 @@ function createTR(data)
     var tdElem4 = document.createElement("td");
     var btnElem1 = document.createElement("button");
     btnElem1.className = 'edit';
-    btnElem1.innerHTML = 'edit';
+    btnElem1.innerHTML = dictionary.btnEdit;
     tdElem4.appendChild(btnElem1);
 
     var tdElem5 = document.createElement("td");
     var btnElem2 = document.createElement("button");
     btnElem2.className = 'delete';
-    btnElem2.innerHTML = 'delete';
+    btnElem2.innerHTML = dictionary.btnDelele;
     tdElem5.appendChild(btnElem2);
 
     trElem.appendChild(tdElem4);
@@ -221,24 +220,24 @@ function validate(elemCode, elemTitle, elemValue)
     if(elemCode.val() == '')
         flag = errorFieldMessage(
             elemCode,
-            'The field must contain the value.'
+            dictionary.erEmpty
         );
     else if(!pattern.test(elemCode.val()))
         flag = errorFieldMessage(
             elemCode, 
-            'Letters, numbers, hyphens, and underscores.'
+            dictionary.erPattern
         );
 
     if(elemTitle.val() == '')
         flag = errorFieldMessage(
             elemTitle, 
-            'The field must contain the value.'
+            dictionary.erEmpty
         );
 
     if(elemValue.val() == '')
         flag = errorFieldMessage(
             elemValue, 
-            'The field must contain the value.'
+            dictionary.erEmpty
         );
 
     return flag;

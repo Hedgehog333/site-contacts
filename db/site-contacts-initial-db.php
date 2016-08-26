@@ -5,11 +5,11 @@ class Site_Contacts_Initial_DB
 	protected $wpdb;
 	protected $table;
 
-	public function __construct($wpdb, $tableName, $version)
+	public function __construct($wpdb, $tableName)
 	{
 		$this->wpdb = $wpdb;
 		$this->table = $wpdb->prefix . $tableName;
-		$this->version = $version;
+		$this->version = '1.0';
 	}
 
 	public function create_table()
