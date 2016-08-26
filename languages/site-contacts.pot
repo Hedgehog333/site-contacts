@@ -1,0 +1,109 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-26 08:11+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+#: site-contacts.php:40
+msgid "Site Contacts"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:33
+msgid "The value must be unique."
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:34
+msgid "Error ajax.\\nOpen the Developer Console to view the error messages."
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:35 
+#: admin/partials/site-contacts-form.php:23
+msgid "Letters, numbers, hyphens, and underscores"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:36
+msgid "The field must contain the value"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:37 
+#: admin/partials/site-contacts-form.php:48
+msgid "edit"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:38 
+#: admin/partials/site-contacts-form.php:49
+msgid "delete"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:39
+msgid "save"
+msgstr ""
+
+#: admin/site-contacts-manager-admin.php:40
+msgid "cancel"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:1
+msgid "Site map"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:4
+msgid "Code map in Google Maps"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:5
+msgid "Save"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:7
+msgid "Site contacst"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:8
+msgid "Please do not use the code"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:8
+msgid "because it is used for a <b>'Site map'</b> to avoid problems"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:14
+msgid "Title"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:15
+msgid "Value"
+msgstr ""
+
+#: admin/partials/site-contacts-form.php:34
+msgid "create"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"It allows you to save contact details in the database and use them on the "
+"website."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/Hedgehog333/site-contacts"
+msgstr ""
+
+#. Author of the plugin
+msgid "Hedgehog333"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/Hedgehog333"
+msgstr ""
