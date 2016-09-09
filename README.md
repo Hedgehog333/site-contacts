@@ -13,8 +13,8 @@ Once activated in the __Settings__ item appears __Site Contacts__.
 ### Shortcode
 
 attributes:
-**code** - *string* is meaningfully contact
-**show_title** - *boolean* header display contact
+* **code** - *string* is meaningfully contact
+* **show_title** - *boolean* header display contact
 
 If you want to get data from html:
 ```html
