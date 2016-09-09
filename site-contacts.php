@@ -69,13 +69,23 @@ function hgh_site_contact_uninstall ()
 }
 register_deactivation_hook( __FILE__, 'hgh_site_contact_uninstall');
 
-function hgh_shortcode_sitecontact($atts) {
+function hgh_shortcode_sitecontact($atts)
+{
+	extract( shortcode_atts( array(
+        'code' => '',
+        'show_title' => false,
+    ), $atts ) );
 	global $db;
-	return $db->select($atts['code'])[0]->value;
+
+	print_r($atts);
+
+	$result = $atts['show_title']?'<span>' . $db->select($atts['code'])[0]->title . '</span> ':'';
+	return $result . $db->select($atts['code'])[0]->value;
 }
 add_shortcode( 'sitecontact', 'hgh_shortcode_sitecontact' );
 
-function hgh_insert_callback() {
+function hgh_insert_callback()
+{
 	global $db;
 	$result = $db->insert(array( 
 		'code' => $_POST['code'], 
@@ -88,14 +98,16 @@ function hgh_insert_callback() {
 }
 add_action( 'wp_ajax_hgh_insert_contact', 'hgh_insert_callback' );
 
-function hgh_delete_callback() {
+function hgh_delete_callback()
+{
 	global $db;
 	$db->delete($_POST['id']);
 	wp_die();
 }
 add_action( 'wp_ajax_hgh_delete_contact', 'hgh_delete_callback' );
 
-function hgh_update_callback() {
+function hgh_update_callback()
+{
 	global $db;
 	$result = $db->update($_POST['id'], array( 
 		'code' => $_POST['code'], 

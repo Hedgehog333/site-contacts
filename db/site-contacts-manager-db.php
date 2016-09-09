@@ -53,6 +53,6 @@ class Site_Contacts_Manager_DB
 			return $result;
 		}
 		else
-			return $this->wpdb->get_results( "SELECT value FROM $this->table WHERE code = '$code'" );
+			return $this->wpdb->get_results( "SELECT title, value FROM $this->table WHERE code = '$code'" );
 	}
 }

@@ -8,7 +8,14 @@ Once activated in the __Settings__ item appears __Site Contacts__.
 * [jQuery] - The Write Less, Do More, JavaScript Library.
 * [Ajax] - Technology to the server without reloading the page.
 
+
+
 ### Shortcode
+
+attributes:
+**code** - *string* is meaningfully contact
+**show_title** - *boolean* header display contact
+
 If you want to get data from html:
 ```html
 [sitecontact code="code_name"]

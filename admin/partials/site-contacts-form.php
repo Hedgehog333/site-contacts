@@ -6,6 +6,7 @@
 </form>
 <h2><?php _e('Site contacst', 'site-contacts') ?>:</h2>
 <span class='description'><?php _e('Please do not use the code', 'site-contacts') ?> <b>'map'</b> <?php _e("because it is used for a <b>'Site map'</b> to avoid problems", 'site-contacts') ?></span>
+
 <form method='post' id="add_contact" >
 	<table class="bordered">
 		<thead>
