@@ -77,8 +77,6 @@ function hgh_shortcode_sitecontact($atts)
     ), $atts ) );
 	global $db;
 
-	print_r($atts);
-
 	$result = $atts['show_title']?'<span>' . $db->select($atts['code'])[0]->title . '</span> ':'';
 	return $result . $db->select($atts['code'])[0]->value;
 }
